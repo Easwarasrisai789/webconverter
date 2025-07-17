@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Toolbox - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" alt="Logo">
+    <ul class="nav-links">
+      <li><a href="{{ url_for('qr') }}">QR Generator</a></li>
+      <li><a href="{{ url_for('youtube') }}">YouTube Downloader</a></li>
+      <li><a href="{{ url_for('pdf') }}">PDF Tools</a></li>
+    </ul>
+  </nav>
+  <section class="container">
+    <h1>Welcome to Smart Toolbox 🧰</h1>
+    <p>Choose a tool from the menu above to get started.</p>
+  </section>
+</body>
+</html>

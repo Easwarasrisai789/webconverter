@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" alt="Logo">
+    <ul class="nav-links">
+      <li><a href="{{ url_for('qr') }}">QR Generator</a></li>
+      <li><a href="{{ url_for('youtube') }}">YouTube Downloader</a></li>
+      <li><a href="{{ url_for('pdf') }}">PDF Tools</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>🔳 QR Code Generator</h2>
+    <form method="POST">
+      <input type="text" name="data" placeholder="Enter text or URL" required>
+      <button type="submit">Generate QR Code</button>
+    </form>
+  </div>
+</body>
+</html>

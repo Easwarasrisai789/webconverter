@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Downloader</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" alt="Logo">
+    <ul class="nav-links">
+      <li><a href="{{ url_for('qr') }}">QR Generator</a></li>
+      <li><a href="{{ url_for('youtube') }}">YouTube Downloader</a></li>
+      <li><a href="{{ url_for('pdf') }}">PDF Tools</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>▶️ YouTube Video Downloader</h2>
+    <form method="POST">
+      <input type="url" name="link" placeholder="Paste YouTube link here" required>
+      <button type="submit">Download Video</button>
+    </form>
+  </div>
+</body>
+</html>
